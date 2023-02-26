@@ -1,19 +1,82 @@
 // _index.scss
 
-h1 {
-  color: orange;
-}
+$text-dark-color: #000000;
+$text-light-color: #ffffff;
+$text-card-color: #a3a3a3;
+$text-read-only-color: rgba(0, 0, 0, 0.3);
+$primary-color: #4b51ef;
+$primary-hover-color: #2e36e0;
+$success-color: #52cf4f;
+$danger-color: #d91313;
+$card-color: #f3f3f3;
+$sidebar-color: #bdbdbd;
+$btn-disabled-color: #afafaf;
 
-h2 {
-  color: blueviolet;
-}
-
-.main {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
+:root {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $text-dark-color;
+}
+
+body {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
+  place-items: start center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  font-weight: 500;
+  color: $primary-color;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: $primary-hover-color;
+}
+
+button {
+  width: fit-content;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 12px;
+  line-height: 14px;
+  color: $text-light-color;
+  background-color: $primary-color;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 0 5px 0 rgba(34, 60, 80, 0.6);
+  transform: scale(1.02);
+}
+button:active {
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background: $btn-disabled-color;
+  box-shadow: none;
+  transform: none;
+  cursor: auto;
+}
+
+textarea:read-only,
+input:read-only {
+  color: $text-read-only-color;
 }

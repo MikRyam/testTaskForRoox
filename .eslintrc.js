@@ -48,5 +48,8 @@ module.exports = {
         unnamedComponents: "arrow-function",
       },
     ],
+    "no-param-reassign": ["error", { "props": false }],
+    'react/jsx-props-no-spreading': 'off',
+    "react/no-unstable-nested-components": 'off',
   },
 }

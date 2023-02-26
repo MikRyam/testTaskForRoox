@@ -1,0 +1,43 @@
+// userCard.scss
+@import '../../index';
+
+.userCard {
+  width: 100%;
+  padding: 10px;
+  background: $card-color;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.userInfoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.userInfoField {
+  display: flex;
+  gap: 7px;
+}
+
+.cardText {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: $text-card-color;
+}
+
+.userDataText {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: $text-dark-color;
+}
+
+.moreDetail {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}

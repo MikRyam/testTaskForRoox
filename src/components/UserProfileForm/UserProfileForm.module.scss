@@ -1,0 +1,71 @@
+// userProfileForm.scss
+@import '../../index';
+
+.userProfileForm {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 6px 20px 12px;
+  border: 1px solid #f3f3f3;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  /*gap: 3px;*/
+
+  label {
+    font-size: 8px;
+  }
+
+  input,
+  textarea {
+    padding: 5px 10px;
+    font-size: 10px;
+    line-height: 12px;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+  }
+
+  input {
+    width: 211px;
+  }
+
+  textarea {
+    width: 100%;
+    resize: none;
+  }
+
+  input:read-only:focus,
+  textarea:read-only:focus {
+    outline: none;
+  }
+
+  input.invalid {
+    border: 1px solid $danger-color;
+  }
+
+  input.invalid:focus {
+    outline-color: $danger-color;
+  }
+}
+
+.errorMessage {
+  font-size: 10px;
+  line-height: 12px;
+  color: $danger-color;
+}
+
+.userProfileSubmitForm {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submitBtn {
+  background: $success-color;
+}

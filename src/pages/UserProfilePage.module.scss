@@ -1,0 +1,22 @@
+.userProfileBlock {
+  height: 100%;
+  width: 100%;
+  margin-left: 152px;
+  padding: 20px 41px 30px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.userProfileTitleBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userProfileTitle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
