@@ -16,7 +16,7 @@ const ruLocales = {
     userProfile: {
       title: 'Профиль пользователя',
       editBtn: 'Редактировать',
-      goBackBtn: '< Назад',
+      goBackBtn: '← Назад',
       form: {
         name: 'Name',
         userName: 'User name',

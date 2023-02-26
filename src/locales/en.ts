@@ -16,7 +16,7 @@ const enLocales = {
     userProfile: {
       title: 'User Profile',
       editBtn: 'Edit',
-      goBackBtn: '< Back',
+      goBackBtn: '← Go back',
       form: {
         name: 'Name',
         userName: 'User name',
