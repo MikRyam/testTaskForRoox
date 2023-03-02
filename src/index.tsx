@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import AppRoutes from './AppRoutes';
 
-//Import i18n.ts
 import './i18n';
 
 const root = ReactDOM.createRoot(

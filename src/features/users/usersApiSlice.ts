@@ -12,15 +12,12 @@ export const userApi = createApi({
     getUsers: build.query<IUser[], void>({
       query: () => 'users/',
       providesTags: (result) =>
-        // is result available?
         result
-          ? // successful query
-            [
+          ? [
               ...result.map(({ id }) => ({ type: 'Users', id } as const)),
               { type: 'Users', id: 'LIST' },
             ]
-          : // an error occurred, but we still want to refetch this query when `{ type: 'Users', id: 'LIST' }` is invalidated
-            [{ type: 'Users', id: 'LIST' }],
+          : [{ type: 'Users', id: 'LIST' }],
     }),
     getUserById: build.query<IUser, string | number | undefined>({
       query: (id) => `users/${id}`,
@@ -35,8 +32,6 @@ export const userApi = createApi({
           body,
         };
       },
-      // Invalidates all queries that subscribe to this User `id` only.
-      // In this case, `getPost` will be re-run. `getPosts` *might*  rerun, if this id was under its results.
       invalidatesTags: (result, error, { id }) => [{ type: 'Users', id }],
     }),
   }),
