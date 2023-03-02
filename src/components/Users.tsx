@@ -2,11 +2,12 @@ import React from 'react';
 import { useGetUsersQuery } from '../features/users/usersApiSlice';
 import UserCard from './UserCard';
 import { useAppSelector } from '../app/hooks';
+import { RootState } from '../app/store';
 
 const Users = () => {
   const { isLoading, isError } = useGetUsersQuery();
 
-  const users = useAppSelector((state) => state.users.users);
+  const users = useAppSelector((state: RootState) => state.users.users);
 
   if (isLoading)
     return (

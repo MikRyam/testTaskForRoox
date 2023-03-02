@@ -3,6 +3,7 @@ import { IUser } from '../../interfaces/userInterface';
 
 export const userApi = createApi({
   reducerPath: 'userApi',
+  refetchOnFocus: true,
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://jsonplaceholder.typicode.com/',
   }),
