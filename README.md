@@ -42,7 +42,7 @@ npm run start
 yarn start
 ```
 
-## Other commands
+## Other available scripts
 
 ```bash
 # run ESLint
