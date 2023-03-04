@@ -51,5 +51,6 @@ module.exports = {
     "no-param-reassign": ["error", { "props": false }],
     'react/jsx-props-no-spreading': 'off',
     "react/no-unstable-nested-components": 'off',
+    "react/jsx-no-useless-fragment": 'off',
   },
 }
