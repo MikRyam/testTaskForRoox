@@ -22,15 +22,19 @@ const Users = () => {
       </div>
     );
 
-  return users?.map((user) => (
-    <UserCard
-      key={user.id}
-      city={user.address.city}
-      company={user.company.name}
-      name={user.name}
-      id={user.id}
-    />
-  ));
+  return (
+    <>
+      {users?.map((user) => (
+        <UserCard
+          key={user.id}
+          city={user.address.city}
+          company={user.company.name}
+          name={user.name}
+          id={user.id}
+        />
+      ))}
+    </>
+  );
 };
 
 export default Users;
